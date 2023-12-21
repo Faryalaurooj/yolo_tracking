@@ -249,7 +249,7 @@ MOT results saved to /home/caic/Downloads/yolo_tracking-master/runs/track/exp2/m
 <details>
 <summary>Evaluation</summary>
 
-Evaluate a combination of detector, tracking method and ReID model on standard MOT dataset or you custom one by. Person re-identification(ReID) is an intelligent video surveillance technology that retrieves the same person from different cameras. This task is extremely challenging due to changes in person poses, different camera views, and occlusion
+Evaluate a combination of detector, tracking method and ReID model on standard MOT dataset or you custom one by. Person re-identification (ReID) is an intelligent video surveillance technology that retrieves the same person from different cameras. This task is extremely challenging due to changes in person poses, different camera views, and occlusion
 
 ```bash
 $ python3 examples/val.py --yolo-model yolo_nas_s.pt --reid-model osnetx1_0_dukemtcereid.pt --tracking-method deepocsort --benchmark MOT16

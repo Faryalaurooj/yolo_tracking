@@ -208,8 +208,11 @@ By default the tracker tracks all MS COCO classes.
 If you want to track a subset of the classes that you model predicts, add their corresponding index after the classes flag,
 
 ```bash
-python examples/track.py --source 0 --yolo-model yolov8s.pt --classes 16 17  # COCO yolov8 model. Track cats and dogs, only
+python track.py --source anyvideoofyourchoice.mp4 --yolo-model yolov8s.pt --classes 16 17  # COCO yolov8 model. Track cats and dogs, only
+python track.py --source people.mp4 --yolo-model yolov8s.pt --classes 16 17  # COCO yolov8 model. Track people only
 ```
+
+# Results : Speed: 1.0ms preprocess, 6.2ms inference, 0.9ms postprocess, 42.8ms tracking per image at shape (1, 3, 384, 640)
 
 [Here](https://tech.amikelive.com/node-718/what-object-categories-labels-are-in-coco-dataset/) is a list of all the possible objects that a Yolov8 model trained on MS COCO can detect. Notice that the indexing for the classes in this repo starts at zero
 
@@ -221,9 +224,10 @@ python examples/track.py --source 0 --yolo-model yolov8s.pt --classes 16 17  # C
 Can be saved to your experiment folder `runs/track/exp*/` by
 
 ```bash
-python examples/track.py --source ... --save-mot
+python track.py --source people.mp4 --yolo-model yolov8s.pt --save-mot
 ```
-
+# Results: Speed: 1.0ms preprocess, 6.2ms inference, 0.8ms postprocess, 43.1ms tracking per image at shape (1, 3, 384, 640)
+MOT results saved to /home/caic/Downloads/yolo_tracking-master/runs/track/exp/mot/people.mp4.txt
 </details>
 
 </details>
@@ -231,7 +235,7 @@ python examples/track.py --source ... --save-mot
 <details>
 <summary>Evaluation</summary>
 
-Evaluate a combination of detector, tracking method and ReID model on standard MOT dataset or you custom one by
+Evaluate a combination of detector, tracking method and ReID model on standard MOT dataset or you custom one by. Person re-identification(ReID) is an intelligent video surveillance technology that retrieves the same person from different cameras. This task is extremely challenging due to changes in person poses, different camera views, and occlusion
 
 ```bash
 $ python3 examples/val.py --yolo-model yolo_nas_s.pt --reid-model osnetx1_0_dukemtcereid.pt --tracking-method deepocsort --benchmark MOT16

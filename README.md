@@ -113,8 +113,16 @@ pip install boxmot
 
 <details>
 <summary>Yolo models</summary>
+# Tracking
 
-
+```
+usage: track.py [-h] [--yolo-model YOLO_MODEL] [--reid-model REID_MODEL] [--tracking-method TRACKING_METHOD] [--source SOURCE]
+                [--imgsz IMGSZ [IMGSZ ...]] [--conf CONF] [--iou IOU] [--device DEVICE] [--show] [--save]
+                [--classes CLASSES [CLASSES ...]] [--project PROJECT] [--name NAME] [--exist-ok] [--half] [--vid-stride VID_STRIDE]
+                [--show-labels] [--show-conf] [--save-txt] [--save-id-crops] [--save-mot] [--line-width LINE_WIDTH] [--per-class]
+                [--verbose] [--vid_stride VID_STRIDE]
+```
+For the time being, we can use above command in this manner:
 
 ```bash
 $ python track.py --yolo-model yolov8n   --source people.mp4    # bboxes only
@@ -223,11 +231,17 @@ python track.py --source people.mp4 --yolo-model yolov8s.pt --classes 16 17  # C
 
 Can be saved to your experiment folder `runs/track/exp*/` by
 
-```bash
-python track.py --source people.mp4 --yolo-model yolov8s.pt --save-mot
 ```
-# Results: Speed: 1.0ms preprocess, 6.2ms inference, 0.8ms postprocess, 43.1ms tracking per image at shape (1, 3, 384, 640)
+python track.py --source people.mp4 --yolo-model yolov8s.pt --save-mot
+python track.py --source people.mp4 --yolo-model yolov8s.pt --save-mot --show  --save 
+```
+# Results for command 1 : Speed: 1.0ms preprocess, 6.2ms inference, 0.8ms postprocess, 43.1ms tracking per image at shape (1, 3, 384, 640)
 MOT results saved to /home/caic/Downloads/yolo_tracking-master/runs/track/exp/mot/people.mp4.txt
+# Results for command 2 : Speed: 1.0ms preprocess, 6.2ms inference, 0.8ms postprocess, 43.4ms tracking per image at shape (1, 3, 384, 640)
+Results saved to /home/caic/Downloads/yolo_tracking-master/runs/track/exp2
+MOT results saved to /home/caic/Downloads/yolo_tracking-master/runs/track/exp2/mot/people.mp4.txt
+
+
 </details>
 
 </details>

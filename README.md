@@ -130,7 +130,7 @@ with yolov8n and people.mp4 video following results
 |  Detector | Speed | inference | postprocess |tracking per image at shape
 | -------- | ----- | ----- | ----- |-------|
 | yolov8n  | 1.1ms | 6.1ms | 0.9ms |46.1ms|
-| yolo_nas_s| 77.4 | 78.4 | 89.0 |
+| yolo_nas_s| 1.4ms | 47.8ms| 0.2ms |32.7ms|
 |     | 77.4 | 78.4 | 89.0 |
 |  | 77.3 | 77.9 | 88.8 |
 |  | 75.6 | 74.6 | 86.0 |

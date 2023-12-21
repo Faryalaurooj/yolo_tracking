@@ -134,8 +134,7 @@ with yolov8n and people.mp4 video following results
 | yolox_n | 1.8ms | 10.5ms | 10.5ms |127.8ms|
 | yolov8n-seg| 1.0ms | 7.0ms|1.3ms |44.6ms |
 | yolov8n-pose | 1.0ms | 6.8ms | 0.9ms|22.9ms|
-
-| <img width=200/> | <img width=100/> | <img width=100/> | <img width=100/> |
+| <img width=200/> | <img width=100/> | <img width=100/> | <img width=100/> |<img width=100/>|
 
 
   </details>

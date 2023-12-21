@@ -125,7 +125,7 @@ $ python track.py --yolo-model yolov8n   --source people.mp4    # bboxes only
 
 ```
 Results : 
-with yolov8n and people.mp4 video following results 
+with different detectors , for object detection as well as segmentation models following results of tracking are achieved
 
 |  Detector | Speed | inference | postprocess |tracking per image at shape (1, 3, 384, 640)
 | -------- | ----- | ----- | ----- |-------|

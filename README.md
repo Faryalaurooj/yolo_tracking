@@ -118,10 +118,10 @@ pip install boxmot
 
 ```bash
 $ python examples/track.py --yolo-model yolov8n   --source path/to/your/video/file.mp4    # bboxes only
-  python examples/track.py --yolo-model yolo_nas_s    # bboxes only
-  python examples/track.py --yolo-model yolox_n       # bboxes only
-                                        yolov8n-seg   # bboxes + segmentation masks
-                                        yolov8n-pose  # bboxes + pose estimation
+  python examples/track.py --yolo-model yolo_nas_s    --source path/to/your/video/file.mp4  # bboxes only
+  python examples/track.py --yolo-model yolox_n      --source path/to/your/video/file.mp4 # bboxes only
+                                        yolov8n-seg  --source path/to/your/video/file.mp4  # bboxes + segmentation masks
+                                        yolov8n-pose  --source path/to/your/video/file.mp4 # bboxes + pose estimation
 
 ```
 

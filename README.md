@@ -117,13 +117,26 @@ pip install boxmot
 
 
 ```bash
-$ python examples/track.py --yolo-model yolov8n   --source path/to/your/video/file.mp4    # bboxes only
-  python examples/track.py --yolo-model yolo_nas_s    --source path/to/your/video/file.mp4  # bboxes only
-  python examples/track.py --yolo-model yolox_n      --source path/to/your/video/file.mp4 # bboxes only
+$ python track.py --yolo-model yolov8n   --source people.mp4    # bboxes only
+  python track.py --yolo-model yolo_nas_s    --source people.mp4  # bboxes only
+  python track.py --yolo-model yolox_n      --source path/to/your/video/file.mp4 # bboxes only
                                         yolov8n-seg  --source path/to/your/video/file.mp4  # bboxes + segmentation masks
                                         yolov8n-pose  --source path/to/your/video/file.mp4 # bboxes + pose estimation
 
 ```
+Results : 
+with yolov8n and people.mp4 video following results 
+
+|  Tracker | Speed | inference | postprocess |tracking per image at shape
+| -------- | ----- | ----- | ----- |-------|
+| yolov8n  | 1.1ms | 6.1ms | 0.9ms |46.1ms|
+| yolo_nas_s| 77.4 | 78.4 | 89.0 |
+|     | 77.4 | 78.4 | 89.0 |
+|  | 77.3 | 77.9 | 88.8 |
+|  | 75.6 | 74.6 | 86.0 |
+| |      | | |
+| <img width=200/> | <img width=100/> | <img width=100/> | <img width=100/> |
+
 
   </details>
 

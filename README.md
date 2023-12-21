@@ -127,7 +127,7 @@ $ python track.py --yolo-model yolov8n   --source people.mp4    # bboxes only
 Results : 
 with yolov8n and people.mp4 video following results 
 
-|  Tracker | Speed | inference | postprocess |tracking per image at shape
+|  Detector | Speed | inference | postprocess |tracking per image at shape
 | -------- | ----- | ----- | ----- |-------|
 | yolov8n  | 1.1ms | 6.1ms | 0.9ms |46.1ms|
 | yolo_nas_s| 77.4 | 78.4 | 89.0 |

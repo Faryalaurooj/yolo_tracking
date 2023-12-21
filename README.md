@@ -119,22 +119,22 @@ pip install boxmot
 ```bash
 $ python track.py --yolo-model yolov8n   --source people.mp4    # bboxes only
   python track.py --yolo-model yolo_nas_s    --source people.mp4  # bboxes only
-  python track.py --yolo-model yolox_n      --source path/to/your/video/file.mp4 # bboxes only
-                                        yolov8n-seg  --source path/to/your/video/file.mp4  # bboxes + segmentation masks
+  python track.py --yolo-model yolox_n      --source people.mp4 # bboxes only
+                                        yolov8n-seg  --source people.mp4  # bboxes + segmentation masks
                                         yolov8n-pose  --source path/to/your/video/file.mp4 # bboxes + pose estimation
 
 ```
 Results : 
 with yolov8n and people.mp4 video following results 
 
-|  Detector | Speed | inference | postprocess |tracking per image at shape
+|  Detector | Speed | inference | postprocess |tracking per image at shape (1, 3, 384, 640)
 | -------- | ----- | ----- | ----- |-------|
 | yolov8n  | 1.1ms | 6.1ms | 0.9ms |46.1ms|
 | yolo_nas_s| 1.4ms | 47.8ms| 0.2ms |32.7ms|
-|     | 77.4 | 78.4 | 89.0 |
-|  | 77.3 | 77.9 | 88.8 |
-|  | 75.6 | 74.6 | 86.0 |
-| |      | | |
+| yolox_n | 1.8ms | 10.5ms | 10.5ms |127.8ms|
+| yolov8n-seg| 1.0ms | 7.0ms|1.3ms |44.6ms |
+| yolov8n-pose | 1.0ms | 6.8ms | 0.9ms|22.9ms|
+
 | <img width=200/> | <img width=100/> | <img width=100/> | <img width=100/> |
 
 

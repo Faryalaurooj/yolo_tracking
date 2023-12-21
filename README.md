@@ -143,12 +143,25 @@ with different detectors , for object detection as well as segmentation models f
 <summary>Tracking methods</summary>
 
 ```bash
-$ python examples/track.py --tracking-method deepocsort
+$ python track.py --tracking-method deepocsort --source people.mp4 
                                              strongsort
                                              ocsort
                                              bytetrack
                                              botsort
 ```
+
+Results : 
+with different trackers ,  following results of tracking are achieved
+
+|  Tracker| Speed | inference | postprocess |tracking per image at shape (1, 3, 384, 640)
+| -------- | ----- | ----- | ----- |-------|
+| deepocsort |1.0ms |5.9ms | 0.8ms |45.8ms |
+| strongsort| 1.3ms | 12.4ms| 1.5ms |123.4ms|
+| ocsort| 1.0ms | 5.8ms | 0.8ms|4.5ms|
+| bytetrack| 1.0ms | 5.7ms|0.8ms |5.2ms |
+| botsort | 1.0ms | 5.9ms |0.8ms|44.3ms|
+| <img width=200/> | <img width=100/> | <img width=100/> | <img width=100/> |<img width=100/>|
+
 
 </details>
 
